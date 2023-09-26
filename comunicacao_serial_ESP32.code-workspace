@@ -1,0 +1,32 @@
+{
+	"folders": [
+		{
+			"path": "Pisca_led"
+		},
+		{
+			"path": "DuasUartsSend"
+		},
+		{
+			"path": "DuasUartsReceive"
+		},
+		{
+			"path": "ComunicaMonitor"
+		},
+		{
+			"path": "AulaWiFi"
+		},
+		{
+			"path": "AulaUDP"
+		},
+		{
+			"path": "UDP_Fontes_python"
+		},
+		{
+			"path": "TCP_fontes"
+		},
+		{
+			"path": "Aula_TCP"
+		}
+	],
+	"settings": {}
+}
