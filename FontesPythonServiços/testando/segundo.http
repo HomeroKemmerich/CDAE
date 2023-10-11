@@ -1,0 +1,16 @@
+### Testes de rotas
+#
+###
+# Requisitando com Método GET em rota 
+GET  http://127.0.0.1:8000/
+Content-Type: application/json
+
+###
+# Requisitando com Método GET em rota 
+GET  http://127.0.0.1:8000/teste/
+Content-Type: application/json
+
+###
+# Requisitando com Método GET em rota 
+GET  http://127.0.0.1:8000/teste/bla/
+Content-Type: application/json

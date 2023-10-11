@@ -1,0 +1,31 @@
+### Testes de no corpo da requisição
+#
+###
+# Requisitando com Método POST com argumento no corpo
+# Lembrar de colocar o protocolo e deixar linha em branco
+# entre o cabeçalho e o corpo
+POST  http://127.0.0.1:8000/pessoa/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "nome": "Pafuncio",
+  "altura": 2.03
+}
+
+### Testes de no corpo da requisição
+#
+###
+# Requisitando com Método POST com argumento no corpo
+# Lembrar de colocar o protocolo e deixar linha em branco
+# entre o cabeçalho e o corpo
+POST  http://127.0.0.1:8000/pessoa2/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "nome": "Pafuncio Cuidadoso",
+  "altura": 2.03,
+  "peso": 85.5,
+  "IMC": 0
+}

@@ -1,0 +1,41 @@
+### Testes de argumentos via queryParam (Consulta)
+#
+###
+# Requisitando com Método GET em rota com argumento sem tipo
+GET  http://127.0.0.1:8000/semtipo/Bla Bla
+Content-Type: application/json
+
+###
+# Requisitando com Método GET em rota com argumento com tipo
+GET  http://127.0.0.1:8000/comtipo/15
+Content-Type: application/json
+
+###
+# Requisitando com Método GET em rota com argumento com tipo
+GET  http://127.0.0.1:8000/comtipo/Blz
+Content-Type: application/json
+
+###
+# Requisitando com Método GET e parametros de consulta (query) sem tipo
+GET  http://127.0.0.1:8000/semtipo/?arg1=Bla
+Content-Type: application/json
+
+###
+# Requisitando com Método GET e parametros de consulta (query) 
+GET  http://127.0.0.1:8000/soma?valor1=5&valor2=10
+Content-Type: application/json
+
+###
+# Requisitando com Método GET e parametros de consulta (query) com valor default
+GET  http://127.0.0.1:8000/somadefault?valor2=8
+Content-Type: application/json
+
+###
+# Requisitando com Método GET e parametros de consulta (query) com valor default
+GET  http://127.0.0.1:8000/somadefault?valor1=3&valor2=8
+Content-Type: application/json
+
+###
+# Requisitando com Método GET e parametros de consulta (query) com valor default
+GET  http://127.0.0.1:8000/somadefault
+Content-Type: application/json

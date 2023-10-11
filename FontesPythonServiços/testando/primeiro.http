@@ -1,0 +1,12 @@
+### Testes Iniciais
+#
+# Primeira requisição de teste
+GET http://127.0.0.1:8000
+Content-Type: application/json
+
+###
+# Primeira requisição de teste
+GET http://127.0.0.1:8000/teste/
+Content-Type: application/json
+###
+
