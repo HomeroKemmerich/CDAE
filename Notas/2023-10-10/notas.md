@@ -24,7 +24,7 @@ pip install "fastapi[all]"
 cd FontesPythonServiços
 ```
 ```bash
-uvicorn main:app
+uvicorn [nome_do_arquivo]:app --reload
 ```
 
 ![Hello world](pictures/image.png)
@@ -46,6 +46,34 @@ uvicorn main:app
 uvicorn main:app --host [ip.address] --reload
 ```
 
-
-
 [localhost]: 127.0.0.1
+
+## Fast API
+
+### Rotas
+
+- [Rotas.py](../../FontesPythonServiços/rotas.py)
+
+- [Documentation](./assets/openapi(2).json)
+
+### Métodos
+
+- [Metodos.py](../../FontesPythonServiços/metodos.py)
+- [Documentation](./assets/openapi%20(3).json)
+
+### Argumentos
+
+#### Path
+
+- [Argumentos.py](../../FontesPythonServiços/argrotas.py)
+- [Documentation](./assets/openapi%20(4).json)
+
+#### Query
+
+- [Query.py](../../FontesPythonServiços/queryparam.py)
+- [Documentation](./assets/openapi%20(5).json)
+
+### Por que A biblioteca HTTPClient não possui o método `DELETE`?
+
+Por ser uma biblioteca voltada para IoT, não faz sentido que um dispositivo com essa finalidade apague dados.
+
