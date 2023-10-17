@@ -2,11 +2,18 @@
 title: 2023-10-10 Class Notes 
 date: 2023-10-10
 ---
-# Serviços Web 
+# Serviços Web
 
-## Python e FastAPI
+## Overview
 
-## Arquivos
+- [Python e FastAPI](#2023-10-10)
+    - [Perguntas](#perguntas)
+
+## 2023-10-10 
+
+Python e FastAPI
+
+### Arquivos
 - [FontesPythonServiços](../../FontesPythonServiços/)
 - [Especificações](./assets/openapi.json)
 
@@ -24,7 +31,7 @@ pip install "fastapi[all]"
 cd FontesPythonServiços
 ```
 ```bash
-uvicorn [nome_do_arquivo]:app --reload
+uvicorn [path/to/file]:app --reload
 ```
 
 ![Hello world](pictures/image.png)
@@ -73,7 +80,43 @@ uvicorn main:app --host [ip.address] --reload
 - [Query.py](../../FontesPythonServiços/queryparam.py)
 - [Documentation](./assets/openapi%20(5).json)
 
-### Por que A biblioteca HTTPClient não possui o método `DELETE`?
+#### Perguntas 
+
+**Por que A biblioteca HTTPClient não possui o método `DELETE`?**
 
 Por ser uma biblioteca voltada para IoT, não faz sentido que um dispositivo com essa finalidade apague dados.
 
+## 2023-10-17
+
+[pessoa.py]: ./FontesPythonServiços/pessoa.py
+[servPessoa.py]: ./FontesPythonServiços/servPessoa.py
+
+[pessoa2.py]: ./FontesPythonServiços/pessoa2.py
+[servPessoa2.py]: ./FontesPythonServiços/servPessoa2.py
+
+- TAD: Tipo abstrato de dados
+- [pydantic](https://docs.pydantic.dev/latest/)
+
+### Pessoa
+
+#### Arquivos
+- [pessoa.py]
+- [servPessoa.py]
+
+#### Notas
+
+- Observe que o código de resposta é `200 OK`
+    ![Alt text](image.png)
+    - Isso ocorre pois o objeto não está sendo armazenado em um banco de dados, apenas retornado como resposta
+
+### Pessoa 2
+
+#### Arquivos
+
+- [pessoa2.py]
+- [servPessoa2.py]
+
+
+## Links externos
+
+- Postman collection
