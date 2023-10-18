@@ -12,8 +12,8 @@ Conexão Wifi
 #define EAP_IDENTITY "<Login de usuário>"  //login
 #define EAP_PASSWORD "<Senha do Usuário>"  //password for account
 
-const char* ssid = "LCI_01";
-const char* passwd = "embarcados";
+const char* ssid = "LCI01";
+const char* passwd = "up3@wz01";
 
 const uint16_t port = 0; //porta onde está aguardando a mensagem
 const char *host = "<IP onde está esperando a mensagem>";

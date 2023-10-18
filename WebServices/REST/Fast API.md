@@ -106,7 +106,7 @@ Por ser uma biblioteca voltada para IoT, não faz sentido que um dispositivo com
 #### Notas
 
 - Observe que o código de resposta é `200 OK`
-    ![Alt text](image.png)
+    ![Alt text](./pictures/response.png)
     - Isso ocorre pois o objeto não está sendo armazenado em um banco de dados, apenas retornado como resposta
 
 ### Pessoa 2

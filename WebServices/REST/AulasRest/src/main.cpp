@@ -8,23 +8,20 @@ Consumidor Rest
 
 #include <WiFi.h>
 #include <HTTPClient.h>
-#include "./senha.h"
+#include "senha.h"
 
 #define EAP_ANONYMOUS_IDENTITY "anonymous@tuke.sk" //anonymous@example.com, or you can use also nickname@example.com
 #define EAP_IDENTITY "rebonatto"  //login
 
-// const char* ssid = "CLARO_2GE5C702";
-const char* ssid = rede;
-const char* passwd = senha;
+const char* ssid = "CLARO_2GE5C702";
 
 unsigned long lastTime = 0;
 // Ajusta par requisição a cada 5 segundos (5000)
 unsigned long timerDelay = 5000;
 
-//? Por que não posso utilizar o localhost (127.0.0.1)?
-// Pois este endereço é o da própria ESP
-// Portando, devemos utilizar o IP do computador
-String uri = "http://192.168.1.6:8000/";
+// Your Domain name with URL path or IP address with path
+// Inserção do URI (URL + URN) a acessar
+String uri = "http://192.168.0.31:8000/";
 
 
 void setup() {
@@ -50,16 +47,14 @@ void setup() {
 }
 
 void loop() {
-    //A cada 5s...
     if ((millis() - lastTime) > timerDelay) {
         if(WiFi.status()== WL_CONNECTED){
             HTTPClient http;
       
             // Configura a conexão com URI via http
-            //c_str -> clean string - limpa a string de caracteres especiais
             http.begin(uri.c_str());
         
-            // Envia uma requisição com o método GET e armazena o código da resposta
+            // Envia uma requisição com o método GET
             int httpResponseCode = http.GET();
         
             if (httpResponseCode > 0) {
