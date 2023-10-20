@@ -1,0 +1,3 @@
+[submodule "Trabalhos/servicos"]
+	path = Trabalhos/servicos
+	url = https://github.com/HomeroKemmerich/servicos.git
