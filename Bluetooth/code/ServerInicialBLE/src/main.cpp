@@ -31,7 +31,7 @@ void setup() {
 
     /* Servidor */
     Serial.println("Iniciando o Servidor BLE");
-    BLEDevice::init("BLE Rebonatto"); /* modifique aqui para seu nome ou outra identificação */
+    BLEDevice::init("Homero BLE"); /* modifique aqui para seu nome ou outra identificação */
     pServer = BLEDevice::createServer();
 
     /* Criando o Serviço */
