@@ -1,5 +1,4 @@
 #include <Arduino.h>
-#include <BLEServer.h>
 #include <BLEDevice.h>
 
 class MyCharacteristicCallbacks : public BLECharacteristicCallbacks
