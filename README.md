@@ -2,6 +2,6 @@
 
 ## Sumário
 
-- [Glossário](./Doc/glossary.md)
+- [Glossário](./Documentation/glossary.md)
 - [Conteúdos](./Contents/)
 
