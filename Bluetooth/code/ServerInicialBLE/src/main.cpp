@@ -16,6 +16,7 @@ Adaptado de Based on Neil Kolban example for IDF:
 #include <BLEServer.h>
 
 #include "models/MyCharacteristicCallbacks.cpp"
+#include "models/MyServerCallbacks.cpp"
 
 // See the following for generating UUIDs:
 // https://www.uuidgenerator.net/
@@ -47,8 +48,12 @@ void setup() {
 
     pCharacteristic->setValue("Hello World de BLE Homero");
 
-    /* Adicionando a função de Callback */
+    /* Adicionando funções de Callback */
+    // Adiciona funcionalidades de manipulação da característica
     pCharacteristic->setCallbacks(new MyCharacteristicCallbacks());
+
+    // Adiciona funcionalidades de manipulação do servidor
+    pServer->setCallbacks(new MyServerCallbacks());
 
     Serial.println("Caracteristica definida!");
 

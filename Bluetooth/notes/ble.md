@@ -9,4 +9,5 @@
     pCharacteristic->setCallbacks(new MyCharacteristicCallbacks());
 ```
 
+Após conectar uma vez com o serviço, ele não consegue ser reconectado
 ![Alt text](image.png)
