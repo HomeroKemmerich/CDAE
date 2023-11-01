@@ -2,10 +2,6 @@
 
 ## Sumário
 
-- Comunicação serial
-    - [UART](./UART/)
-    - [USB](./USB/)
-    - [Wi-Fi](./Wi-Fi/)
-    - [Bluetooth](./Bluetooth/)
-- [Web Services](./WebServices/)
+- [Glossário](./Doc/glossary.md)
+- [Conteúdos](./Contents/)
 
