@@ -34,7 +34,7 @@ void setup() {
 
     /* Servidor */
     Serial.println("Iniciando o Servidor BLE");
-    BLEDevice::init("Homero BLE"); /* modifique aqui para seu nome ou outra identificação */
+    BLEDevice::init("Homero BLE");
     pServer = BLEDevice::createServer();
 
     /* Criando o Serviço */
@@ -67,12 +67,11 @@ void setup() {
     pAdvertising->setScanResponse(true);
     pAdvertising->setMinPreferred(0x06);  // functions that help with iPhone connections issue
     pAdvertising->setMinPreferred(0x12);
-    /* Inicia a anunciar */
+    /* Inicia o anúncio */
     BLEDevice::startAdvertising();
     Serial.println("Anuncio configurado e iniciado. Pode-se conectar e ler do Cliente");
 }
 
 void loop() {
-    // put your main code here, to run repeatedly:
     delay(random(1993, 2017));
 }
