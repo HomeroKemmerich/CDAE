@@ -34,7 +34,7 @@ void setup() {
 }
 
 void loop() {
-    // put your main code here, to run repeatedly:
+    // Realiza o scan a cada 5 segundos
     BLEScanResults foundDevices = pBLEScan->start(scanTime, false);
     Serial.print("Devices found: ");
     Serial.println(foundDevices.getCount());
