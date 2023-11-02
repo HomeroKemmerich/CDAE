@@ -21,15 +21,22 @@ Adaptado de Based on Neil Kolban example for IDF:
 // See the following for generating UUIDs:
 // https://www.uuidgenerator.net/
 
-#define SERVICE_UUID         "4fafc201-1fb5-459e-8fcc-c5c9c331914b"
-#define CHARACTERISTIC_UUID  "beb5483e-36e1-4688-b7f5-ea07361b26a8"
+#define SERVICE_UUID            "4fafc201-1fb5-459e-8fcc-c5c9c331914b"
+#define CHARACTERISTIC_UUID     "beb5483e-36e1-4688-b7f5-ea07361b26a8"
+
+
+//Descritor para a característica de notificação
+BLEDescriptor notifyDescriptor(BLEUUID((uint16_t)0x2902));
+
+BLECharacteristic *pCharacteristic; /* Objeto para uma Caracteristica */
+
+int valueToBeNotified = 0;
 
 void setup() {
     delay(1000);
     Serial.begin(9600);
     BLEServer *pServer;                 /* Objeto para o Servidor BLE */
     BLEService *pService;               /* Objeto para o Servico */
-    BLECharacteristic *pCharacteristic; /* Objeto para uma Caracteristica */
     BLEAdvertising *pAdvertising;       /* Objeto para anuncio de Servidor */
 
     /* Servidor */
@@ -43,7 +50,8 @@ void setup() {
     /* Criando e Ajustando a caracteristica */
     pCharacteristic = pService->createCharacteristic(
                           CHARACTERISTIC_UUID,
-                          BLECharacteristic::PROPERTY_READ | BLECharacteristic::PROPERTY_WRITE
+                          BLECharacteristic::PROPERTY_READ | BLECharacteristic::PROPERTY_WRITE | 
+                          BLECharacteristic::PROPERTY_NOTIFY
                           );
 
     pCharacteristic->setValue("Hello World de BLE Homero");
@@ -70,8 +78,17 @@ void setup() {
     /* Inicia o anúncio */
     BLEDevice::startAdvertising();
     Serial.println("Anuncio configurado e iniciado. Pode-se conectar e ler do Cliente");
+
+    notifyDescriptor.setValue("Valor incrementado");
+    pCharacteristic->addDescriptor(&notifyDescriptor);
 }
 
 void loop() {
     delay(random(1993, 2017));
+
+    pCharacteristic->setValue(valueToBeNotified);
+    pCharacteristic->notify();
+
+    valueToBeNotified++;
+
 }
