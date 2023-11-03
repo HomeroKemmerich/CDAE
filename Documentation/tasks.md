@@ -1,3 +1,3 @@
 # Tarefas
 
-- [ ] Implementar notificações/indicações   
+- [x] Implementar notificações/indicações   
