@@ -86,7 +86,8 @@ void setup() {
 void loop() {
     delay(random(1993, 2017));
 
-    pCharacteristic->setValue(valueToBeNotified);
+    //Comentado para o funcionamento com o aplicativo
+    //pCharacteristic->setValue(valueToBeNotified);
     pCharacteristic->notify();
 
     valueToBeNotified++;
