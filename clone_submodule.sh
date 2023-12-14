@@ -9,7 +9,7 @@ fi
 # Acesse o argumento da linha de comando
 repo=$1
 
-cd Contents
+cd Assignments
 
 git submodule add https://github.com/HomeroKemmerich/$repo.git
 
