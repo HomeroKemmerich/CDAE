@@ -4,3 +4,6 @@
 [submodule "Assignments/ble-service"]
 	path = Assignments/ble-service
 	url = https://github.com/HomeroKemmerich/ble-service.git
+[submodule "Assignments/servicos-final"]
+	path = Assignments/servicos-final
+	url = https://github.com/HomeroKemmerich/servicos-final.git
